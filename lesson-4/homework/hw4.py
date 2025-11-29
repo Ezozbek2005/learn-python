@@ -1,23 +1,102 @@
-The error message in your screenshot says:
+ # ==========================
+# DICTIONARY EXERCISES
+# ==========================
 
-“A file with the same name already exists. Please choose a different name and try again.”
+# 1. Sort a Dictionary by Value
+print("1. SHART: Dictionary qiymatlari bo'yicha kichikdan kattaga va kattadan kichikka sort qil.")
+data = {"a": 30, "b": 10, "c": 20}
 
-This happens because GitHub won’t let you create a new file with the exact same name as an existing one in the repository on the same branch. Here’s what you can do:
+asc = dict(sorted(data.items(), key=lambda x: x[1]))
+print("Ascending:", asc)
 
-Check if the file already exists
+desc = dict(sorted(data.items(), key=lambda x: x[1], reverse=True))
+print("Descending:", desc)
+print()
 
-Make sure hw4.py is not already in the repository. If it is, you don’t need to create a new file; you can edit the existing one instead.
+# ------------------------------------------------------
 
-Rename the file
+# 2. Add a Key to a Dictionary
+print("2. SHART: Dictionaryga yangi key qo'sh.")
+d = {0: 10, 1: 20}
+d[2] = 30
+print(d)
+print()
 
-If you want to keep both versions, rename your new file to something like hw4_v2.py or hw4_exercises.py.
+# ------------------------------------------------------
 
-Edit directly instead of creating a new file
+# 3. Concatenate Multiple Dictionaries
+print("3. SHART: Uchta dictionaryni birlashtir.")
+dic1 = {1: 10, 2: 20}
+dic2 = {3: 30, 4: 40}
+dic3 = {5: 50, 6: 60}
 
-Click on the existing hw4.py file in the repository, then click the pencil icon to edit it. You can add your dictionary and set exercises there, then commit the changes.
+new_dic = {}
+new_dic.update(dic1)
+new_dic.update(dic2)
+new_dic.update(dic3)
+print(new_dic)
+print()
 
-Branch options
+# ------------------------------------------------------
 
-You can still create a new branch, but the file name itself must be unique in that branch. Even in a new branch, GitHub checks if a file with the same name already exists in the main branch.
+# 4. Generate a Dictionary with Squares (1 to n)
+print("4. SHART: 1 dan n gacha kvadrat dictionary yarat.")
+n = 5
+d = {}
+for x in range(1, n + 1):
+    d[x] = x * x
+print(d)
+print()
 
-If you want, I can suggest a quick way to rename your commit and avoid this error, so you can successfully propose the changes. Do you want me to do that?
+# ------------------------------------------------------
+
+# 5. Dictionary of Squares (1 to 15)
+print("5. SHART: 1 dan 15 gacha kvadrat dictionary yarat.")
+d = {}
+for x in range(1, 15 + 1):
+    d[x] = x * x
+print(d)
+print()
+
+# ==========================
+# SET EXERCISES
+# ==========================
+
+# 1. Create a Set
+print("1. SHART: Set yarat.")
+my_set = {1, 2, 3, 4}
+print(my_set)
+print()
+
+# ------------------------------------------------------
+
+# 2. Iterate Over a Set
+print("2. SHART: Set elementlari ustida yurish.")
+for x in my_set:
+    print(x)
+print()
+
+# ------------------------------------------------------
+
+# 3. Add Member(s) to a Set
+print("3. SHART: Setga element qo'sh.")
+my_set.add(5)
+my_set.add(6)
+print(my_set)
+print()
+
+# ------------------------------------------------------
+
+# 4. Remove Item(s) from a Set
+print("4. SHART: Setdan element o'chir.")
+my_set.remove(4)  # bor bo‘lsa o‘chiradi
+print(my_set)
+print()
+
+# ------------------------------------------------------
+
+# 5. Remove an Item if Present in the Set
+print("5. SHART: Agar element setda bo'lsa o'chir.")
+my_set.discard(6)  # bor bo‘lsa o‘chiradi, yo‘q bo‘lsa xato bermaydi
+print(my_set)
+print()
